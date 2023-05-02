@@ -1,0 +1,29 @@
+<div class="container">
+<form #userData="ngForm" (ngSubmit)="createUser(userData.value)">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Name" name="empname" ngModel>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Email" name="emailid" ngModel>
+      </div>
+      <div class="col">
+        <input type="number" class="form-control" placeholder="Phone Number" name="phonenumber" ngModel>
+      </div>
+      <div class="invisible">
+        <input type="number" class="form-control" name="id"  ngModel>
+      </div>
+      <div class="col">
+        <!-- <input type="button" class="form-control" placeholder="Submit"> -->
+        <button type="submit"  class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div>
+  <li *ngFor="let user of listUsers$">
+    {{user.emailid}}
+  </li>
+</div>
+

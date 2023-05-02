@@ -1,0 +1,14 @@
+<h1>Employee Report Works!</h1>
+
+<kendo-grid [data]="data">
+    <kendo-grid-column field="ProductID" title="ID"> </kendo-grid-column>
+    <kendo-grid-column field="ProductName" title="Name"> </kendo-grid-column>
+    <kendo-grid-column field="Category.CategoryName" title="Category"> </kendo-grid-column>
+    <kendo-grid-column field="UnitPrice" title="Price"> </kendo-grid-column>
+    <kendo-grid-column title="Actions">
+        <ng-template kendoGridCellTemplate let-dataItem>
+          <button class="k-button k-primary" *ngIf="CanEdit" >Edit</button> 
+          <button class="k-button k-primary" *ngIf="CanDelete"  >Delete</button>
+        </ng-template>
+    </kendo-grid-column>
+</kendo-grid>

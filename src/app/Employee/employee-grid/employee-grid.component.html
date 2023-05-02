@@ -1,0 +1,32 @@
+<!-- <ag-grid-angular
+ class="ag-theme-balham"
+    style="height: 500px;"
+    [rowData]="rows"
+    [columnDefs]="columnDefs"
+    >
+</ag-grid-angular> -->
+
+<kendo-grid [data]="data">
+    <kendo-grid-column field="ProductID" title="ID"> </kendo-grid-column>
+    <kendo-grid-column field="ProductName" title="Name"> </kendo-grid-column>
+    <kendo-grid-column field="Category.CategoryName" title="Category"> </kendo-grid-column>
+    <kendo-grid-column field="UnitPrice" title="Price"> </kendo-grid-column>
+    <kendo-grid-column title="Actions">
+        <ng-template kendoGridCellTemplate let-dataItem>
+          <button class="k-button k-primary" *ngIf="CanEdit" >Edit</button> 
+          <button class="k-button k-primary" *ngIf="CanDelete"  >Delete</button>
+        </ng-template>
+    </kendo-grid-column>
+</kendo-grid>
+
+<!-- <kendo-grid [data]="gridData">
+    <kendo-grid-column field="id" title="ID"> </kendo-grid-column>
+    <kendo-grid-column field="empname" title="Name"> </kendo-grid-column>
+    <kendo-grid-column field="emailid" title="Email ID"> </kendo-grid-column>
+    <kendo-grid-column field="phonenumber" title="Phone Number"> </kendo-grid-column>
+    <ng-template kendoGridCellTemplate let-dataItem>
+        <button class="k-button k-primary" >Edit</button>
+        <button class="k-button k-primary" >Delete</button>
+      </ng-template>
+</kendo-grid> -->
+
